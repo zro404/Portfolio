@@ -1,49 +1,62 @@
 import { useState } from "react"
 
+const LINKS =
+  <>
+    <li>
+      <a href="#about">
+        About
+      </a>
+    </li>
+    <li>
+      <a href="">
+        Projects
+      </a>
+    </li>
+    <li>
+      <a href="">
+        Resume
+      </a>
+    </li>
+    <li>
+      <a href="">
+        Hire Me
+      </a>
+    </li>
+  </>
+
 export const NavBar = () => {
-  const [isHidden, setIsHidden] = useState(false);
+  const [isShown, setIsShown] = useState(false);
   return (
-    <header className="w-[70%] mx-auto fixed inset-x-0 top-0 flex items-center justify-between mt-7">
-      <h1 className="nav-title">Harish</h1>
-      <ul className="gap-16 md:flex hidden">
-        <li>
-          <p>
-            About
-          </p>
-        </li>
-        <li>
-          <p>
-            Projects
-          </p>
-        </li>
-        <li>
-          <p>
-            Resume
-          </p>
-        </li>
-        <li>
-          <p>
-            Hire Me
-          </p>
-        </li>
-      </ul>
-      <button className="md:hidden">
-        <svg
-          className="size-10"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
+    <header className={`px-[15%] fixed inset-x-0 top-0 pt-7 ${isShown&&"bg-primary h-screen"}`}>
+      <div className="flex items-center justify-between">
+        <h1 className="nav-title">Harish</h1>
+        <ul className="gap-16 hidden md:flex flex-row">
+          {LINKS}
+        </ul>
+        <button
+          className="md:hidden"
+          onClick={() => setIsShown(!isShown)}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
-          />
-        </svg>
-      </button>
-    </header>
+          <svg
+            className="size-10"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+            />
+          </svg>
+        </button>
+      </div>
+      <ul className={`flex flex-col h-full mt-20 gap-16 ${!isShown&&"hidden"}`}>
+        {LINKS}
+      </ul>
+    </header >
   )
 }
 
