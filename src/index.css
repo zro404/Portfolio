@@ -41,7 +41,7 @@ h4 {
     font-size: 24px;
 }
 
-p, a {
+p, a, input, textarea {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -50,4 +50,8 @@ p, a {
 
 .nav-title {
     font-size: 32px;
+}
+
+.form-element {
+    @apply bg-primary border-b-secondary border-b-2 w-full mt-4 h-10
 }

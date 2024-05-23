@@ -1,6 +1,6 @@
 export const About = () => {
   return (
-    <div id="about" className="min-h-screen flex items-center flex-col lg:flex-row justify-center gap-10 lg:gap-20">
+    <div id="about" className="min-h-screen flex items-center flex-col lg:flex-row gap-10 lg:gap-20">
       <div
         className="bg-no-repeat bg-primary bg-blend-luminosity bg-center bg-cover bg-[url('/src/assets/profile.png')] \
         lg:w-[28rem] lg:h-[38rem] lg:min-w-[25rem] rounded-full lg:rounded-none size-56"

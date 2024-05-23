@@ -15,7 +15,7 @@ export const Experience = () => {
     <div className="flex flex-col gap-10 min-h-screen justify-center">
       <h2>Experience</h2>
       <div className="flex flex-col gap-10 justify-center pl-1">
-        {EXP.map(e => <ExpItem {...e} />)}
+        {EXP.map((e, i) => <ExpItem {...e} key={i} />)}
       </div>
     </div>
   )

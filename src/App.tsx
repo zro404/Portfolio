@@ -1,5 +1,5 @@
-import { NavBar } from './components'
-import { About, Experience, Hero, Projects } from './pages'
+import { Footer, NavBar } from './components'
+import { About, Contact, Experience, Hero, Projects } from './pages'
 
 function App() {
   return (
@@ -10,7 +10,9 @@ function App() {
         <About />
         <Projects />
         <Experience />
+        <Contact />
       </div>
+      <Footer />
     </div>
   )
 }
