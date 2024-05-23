@@ -1,5 +1,5 @@
 import { NavBar } from './components'
-import { About, Hero } from './pages'
+import { About, Experience, Hero, Projects } from './pages'
 
 function App() {
   return (
@@ -8,6 +8,8 @@ function App() {
       <div>
         <Hero />
         <About />
+        <Projects />
+        <Experience />
       </div>
     </div>
   )
