@@ -1,7 +1,7 @@
 export const Contact = () => {
   return (
     <div className="min-h-[90vh] flex items-center">
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between w-full flex-col lg:flex-row gap-10 lg:gap-0">
         <p className="text-[24px] text-wrap flex-1">
           Contact me with the form here or @
           <a href="mailto:dev.harish3124@gmail.com" className="ml-2 text-[24px] underline">dev.harish3124@gmail.com</a>

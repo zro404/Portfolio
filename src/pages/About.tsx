@@ -1,3 +1,4 @@
+import Emoji from '../assets/WavingHand.svg';
 export const About = () => {
   return (
     <div id="about" className="min-h-screen flex items-center flex-col lg:flex-row gap-10 lg:gap-20">
@@ -6,7 +7,10 @@ export const About = () => {
         lg:w-[28rem] lg:h-[38rem] lg:min-w-[25rem] rounded-full lg:rounded-none size-56"
       />
       <div className="lg:h-[38rem] lg:w-1/2 w-full">
-        <h2>Hey There 👋</h2>
+        <div className='flex items-center gap-3'>
+          <h2>Hey There</h2>
+          <img src={Emoji} className='size-12' />
+        </div>
         <p className="mt-3">
           I'm Harish, an innovative and passionate frontend developer,
           proficient in modern frameworks like React and Tailwind,
