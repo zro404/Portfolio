@@ -6,9 +6,11 @@ export default {
   ],
   theme: {
     colors: {
-      "primary": "#212529",
-      "secondary": "#ADB5BD",
-      "tertiary": "#495057",
+      "primary": "#98DDCA",
+      "secondary": "#4D4D4D",
+      "accent-1": "#D5ECC2",
+      "accent-2": "#FFD3B4",
+      "accent-3": "#FFAAA7",
     },
     extend: {},
   },

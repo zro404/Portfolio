@@ -3,10 +3,10 @@ export const About = () => {
   return (
     <div id="about" className="min-h-screen flex items-center flex-col lg:flex-row gap-10 lg:gap-20">
       <div
-        className="bg-no-repeat bg-primary bg-blend-luminosity bg-center bg-cover bg-[url('/src/assets/profile.png')] \
-        lg:w-[28rem] lg:h-[38rem] lg:min-w-[25rem] rounded-full lg:rounded-none size-56"
+        className="bg-no-repeat bg-primary bg-center bg-cover bg-[url('/src/assets/profile.jpg')] \
+        lg:w-[49em] lg:h-[30rem] rounded-full lg:rounded-full size-56"
       />
-      <div className="lg:h-[38rem] lg:w-1/2 w-full">
+      <div className="lg:h-[38rem] w-full flex flex-col justify-center">
         <div className='flex items-center gap-3'>
           <h2>Hey There</h2>
           <img src={Emoji} className='size-12' />

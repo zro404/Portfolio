@@ -1,9 +1,12 @@
+const ProjectCard = () => (
+  <div className="lg:h-[35rem] lg:w-96 h-80 w-60 bg-secondary lg:rounded-[7rem]"></div>
+)
 export const Projects = () => {
   return (
-    <div className="min-h-screen flex xl:flex-row flex-col justify-center items-center gap-5 xl:justify-between flex-wrap">
-      <div className="h-[40rem] w-96 bg-tertiary"></div>
-      <div className="h-[40rem] w-96 bg-tertiary"></div>
-      <div className="h-[40rem] w-96 bg-tertiary"></div>
+    <div className="min-h-screen flex xl:flex-row flex-col justify-center items-center gap-10 flex-wrap">
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
     </div>
   )
 }

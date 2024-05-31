@@ -18,7 +18,7 @@ const LINKS =
       </a>
     </li>
     <li>
-      <a href="">
+      <a href="" className="border-secondary border-[3px] p-2 px-3">
         Hire Me
       </a>
     </li>

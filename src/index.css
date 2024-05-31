@@ -10,7 +10,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background: #212529;
+    background: #98DDCA;
 }
 
 h1 {
@@ -54,9 +54,4 @@ p, a, input, textarea {
 
 .form-element {
     @apply bg-primary border-b-secondary border-b-2 w-full mt-4 h-10;
-}
-
-.blur-element {
-    @apply absolute z-[-1] rounded-full opacity-50 mix-blend-plus-lighter blur-lg;
-    background: radial-gradient(#495057ff, #495057dd , #495057aa, #49505755, #49505700);
 }
