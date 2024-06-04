@@ -4,7 +4,7 @@ export const About = () => {
     <div id="about" className="min-h-screen flex items-center flex-col lg:flex-row gap-10 lg:gap-20">
       <div
         className="bg-no-repeat bg-primary bg-center bg-cover bg-[url('/src/assets/profile.jpg')] \
-        lg:w-[49em] lg:h-[30rem] rounded-full lg:rounded-full size-56"
+        lg:w-[49em] lg:h-[30rem] rounded-full lg:rounded-full size-56" id="dp"
       />
       <div className="lg:h-[38rem] w-full flex flex-col justify-center">
         <div className='flex items-center gap-3'>

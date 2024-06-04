@@ -34,13 +34,14 @@ export const ExpItem = (props: ExpProps) => {
         <p>{props.mode}</p>
         <p>{props.start} ~ {props.end}</p>
       </div>
-      <img
-        src="/src/assets/blobs/blob-small.svg"
-        className="absolute z-[-1] sm:size-56 size-44 left-[14vw]"
-        style={{
-          transform: `rotate(${props.blobRotation}deg)`
-        }}
-      />
     </div>
   )
 }
+
+// <img
+//   src="/src/assets/blobs/blob-small.svg"
+//   className="absolute z-[-1] sm:size-56 size-44 left-[14vw]"
+//   style={{
+//     transform: `rotate(${props.blobRotation}deg)`
+//   }}
+// />

@@ -10,7 +10,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background: #98DDCA;
+    @apply bg-primary;
 }
 
 h1 {
@@ -41,7 +41,10 @@ h4 {
     font-size: 24px;
 }
 
-p, a, input, textarea {
+p,
+a,
+input,
+textarea {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -54,4 +57,18 @@ p, a, input, textarea {
 
 .form-element {
     @apply bg-primary border-b-secondary border-b-2 w-full mt-4 h-10;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
+}
+
+#hero {
+    background: linear-gradient(to bottom, #D5ECC270 75%, #98DDCA70);
+}
+
+#dp {
+    box-shadow: 5px 5px 200px 20px #27a102a0;
 }

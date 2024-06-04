@@ -1,14 +1,14 @@
-import { Footer, NavBar } from './components'
-import { About, Contact, Experience, Hero, Projects } from './pages'
-
+import { Footer, Matrix, NavBar } from './components'
+import { About, Contact, Experience, Hero } from './pages'
+// w-[70%] mx-auto 
 function App() {
   return (
-    <div className='w-[70%] mx-auto text-secondary'>
+    <div className='text-secondary w-[70%] mx-auto'>
+      <Matrix />
       <NavBar />
       <div>
         <Hero />
         <About />
-        <Projects />
         <Experience />
         <Contact />
       </div>
