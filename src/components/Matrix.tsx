@@ -9,17 +9,26 @@ export const Matrix = () => {
     const fontSize = 16;
     const alphabet = '01'
     const rainDrops: number[] = [];
-    if (canvasEl.current) {
-      ctx = canvasEl.current?.getContext('2d');
+    let columns: number;
+
+    const setCanvasSize = () => {
+      if (!canvasEl.current) return;
       canvasEl.current.width = window.innerWidth;
       canvasEl.current.height = pageLength * window.innerHeight;
 
-      const columns = canvasEl.current.width / fontSize;
+      columns = canvasEl.current.width / fontSize;
 
       for (let x = 0; x < columns; x++) {
         rainDrops[x] = 1;
       }
     }
+
+    if (canvasEl.current) {
+      ctx = canvasEl.current?.getContext('2d');
+      setCanvasSize();
+    }
+
+    window.onresize = setCanvasSize;
 
     const draw = () => {
       if (!ctx || !canvasEl.current) return;
@@ -44,6 +53,6 @@ export const Matrix = () => {
   }, []);
 
   return (
-    <canvas ref={canvasEl} className={`w-screen min-h-screen h-[${100*pageLength}vh] -ml-[15%] z-[-1] absolute`} />
+    <canvas ref={canvasEl} className={`w-screen min-h-screen h-[${100 * pageLength}vh] -ml-[15%] z-[-1] absolute`} />
   )
 }

@@ -15,7 +15,7 @@ export const Experience = () => {
   return (
     <div className="flex flex-col gap-10 min-h-screen justify-center items-center sm:items-start">
       <h2 className="sm:text-[40px] text-[32px]">Experience</h2>
-      <div className="flex flex-col gap-20 justify-center pl-1">
+      <div className="flex flex-col justify-center pl-1">
         {EXP.map((e, i) => <ExpItem {...e} key={i} />)}
       </div>
     </div>
