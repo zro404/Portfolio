@@ -31,7 +31,7 @@ export const NavBar = () => {
   return (
     <header className={`px-[15%] fixed inset-x-0 top-0 pt-7 z-10 ${isShown && "bg-primary h-screen"}`}>
       <div className="flex items-center justify-between">
-        <h1 className="nav-title">Harish</h1>
+        <a href="#home"><h1 className="nav-title">Harish</h1></a>
         <ul className="gap-16 hidden lg:flex flex-row items-center">
           {LINKS}
         </ul>

@@ -1,9 +1,9 @@
-import Emoji from '../assets/WavingHand.svg';
+import Emoji from '/public/WavingHand.svg';
 export const About = () => {
   return (
     <div id="about" className="min-h-screen flex items-center flex-col lg:flex-row gap-10 lg:gap-20">
       <div
-        className="bg-no-repeat bg-primary bg-center bg-cover bg-[url('/src/assets/profile.jpg')] \
+        className="bg-no-repeat bg-primary bg-center bg-cover bg-[url('/public/profile.jpg')] \
         lg:w-[49em] lg:h-[30rem] rounded-full lg:rounded-full size-56" id="dp"
       />
       <div className="lg:h-[38rem] w-full flex flex-col justify-center">
