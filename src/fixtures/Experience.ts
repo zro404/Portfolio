@@ -2,7 +2,7 @@ import { ExpProps } from "../pages";
 
 export const EXP: ExpProps[] = [
   {
-    thumbnail: "/public/corider.jpg",
+    thumbnail: "/corider.jpg",
     position: "Frontend Developer",
     company: "Corider",
     role: "Intership",
@@ -12,7 +12,7 @@ export const EXP: ExpProps[] = [
     blobRotation: 0,
   },
   {
-    thumbnail: "/public/hackclub.png",
+    thumbnail: "/hackclub.png",
     position: "Web Developer",
     company: "Hackclub VITC",
     role: "Member",
@@ -22,7 +22,7 @@ export const EXP: ExpProps[] = [
     blobRotation: 90,
   },
   {
-    thumbnail: "/public/lug.png",
+    thumbnail: "/lug.png",
     position: "Frontend Developer",
     company: "Linux Club VITC",
     role: "Member",
