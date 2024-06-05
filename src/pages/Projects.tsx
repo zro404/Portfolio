@@ -3,7 +3,7 @@ const ProjectCard = () => (
 )
 export const Projects = () => {
   return (
-    <div className="min-h-screen flex xl:flex-row flex-col justify-center items-center gap-10 flex-wrap">
+    <div id="projects" className="min-h-screen flex xl:flex-row flex-col justify-center items-center gap-10 flex-wrap">
       <ProjectCard />
       <ProjectCard />
       <ProjectCard />

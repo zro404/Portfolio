@@ -56,17 +56,14 @@ textarea {
 }
 
 .form-element {
-    @apply bg-primary border-b-secondary border-b-2 w-full mt-4 h-10;
+    @apply bg-primary border-secondary border-2 rounded-md w-full mt-4 h-10 text-secondary placeholder-secondary p-3;
+    font-size: 23px;
 }
 
 .glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(60px);
-    -webkit-backdrop-filter: blur(60px);
-}
-
-#hero {
-    background: linear-gradient(to bottom, #D5ECC270 75%, #98DDCA70);
+    background: rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 #dp {

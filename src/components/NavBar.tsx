@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Arrow } from "./Arrow";
 
 const LINKS =
   <>
@@ -8,7 +9,7 @@ const LINKS =
       </a>
     </li>
     <li>
-      <a href="">
+      <a href="#projects">
         Projects
       </a>
     </li>
@@ -18,8 +19,9 @@ const LINKS =
       </a>
     </li>
     <li>
-      <a href="" className="border-secondary border-[3px] p-2 px-3">
+      <a href="#contact" className="lg:border-secondary lg:border-2 lg:p-2 lg:px-3 rounded-full flex items-center lg:gap-1 gap-2">
         Hire Me
+        <Arrow />
       </a>
     </li>
   </>
@@ -27,10 +29,10 @@ const LINKS =
 export const NavBar = () => {
   const [isShown, setIsShown] = useState(false);
   return (
-    <header className={`px-[15%] fixed inset-x-0 top-0 pt-7 ${isShown && "bg-primary h-screen"}`}>
+    <header className={`px-[15%] fixed inset-x-0 top-0 pt-7 z-10 ${isShown && "bg-primary h-screen"}`}>
       <div className="flex items-center justify-between">
         <h1 className="nav-title">Harish</h1>
-        <ul className="gap-16 hidden lg:flex flex-row">
+        <ul className="gap-16 hidden lg:flex flex-row items-center">
           {LINKS}
         </ul>
         <button
