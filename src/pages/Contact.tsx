@@ -10,29 +10,34 @@ export const Contact = () => {
         </h4>
         <form
           name="contact"
-          method="POST"
           data-netlify="true"
           className="flex flex-col items-start text-2xl flex-1"
         >
-          <input
-            name="name"
-            placeholder="Your name ?"
-            className="form-element w-full glass py-5"
-            required
-          />
-          <input
-            name="email"
-            type="email"
-            placeholder="Your email ?"
-            className="form-element w-full glass py-5"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="What can I do for you ?"
-            className="form-element min-h-72 glass"
-            required
-          />
+          <label className="w-full">
+            <input
+              name="name"
+              placeholder="Your name ?"
+              className="form-element w-full glass py-5"
+              required
+            />
+          </label>
+          <label className="w-full">
+            <input
+              name="email"
+              type="email"
+              placeholder="Your email ?"
+              className="form-element w-full glass py-5"
+              required
+            />
+          </label>
+          <label className="w-full">
+            <textarea
+              name="message"
+              placeholder="What can I do for you ?"
+              className="form-element min-h-72 glass"
+              required
+            />
+          </label>
           <button type="submit" className="mt-10 border-secondary border-[2px] p-3 px-5 rounded-md flex items-center gap-1">
             Send
             <Arrow />
