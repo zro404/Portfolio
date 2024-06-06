@@ -10,7 +10,8 @@ export const Contact = () => {
         </h4>
         <form
           name="contact"
-          data-netlify="true"
+          action="https://formsubmit.co/dev.harish3124@gmail.com"
+          method="POST"
           className="flex flex-col items-start text-2xl flex-1"
         >
           <label className="w-full">
