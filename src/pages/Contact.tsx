@@ -9,35 +9,29 @@ export const Contact = () => {
           <a href="mailto:dev.harish3124@gmail.com" className="ml-2 text-[20px] lg:text-[24px] underline">dev.harish3124@gmail.com</a>
         </h4>
         <form
-          name="contact"
-          data-netlify="true"
+          action="https://formspree.io/f/xgegjqae"
+          method="POST"
           className="flex flex-col items-start text-2xl flex-1"
         >
-          <label className="w-full">
-            <input
-              name="name"
-              placeholder="Your name ?"
-              className="form-element w-full glass py-5"
-              required
-            />
-          </label>
-          <label className="w-full">
-            <input
-              name="email"
-              type="email"
-              placeholder="Your email ?"
-              className="form-element w-full glass py-5"
-              required
-            />
-          </label>
-          <label className="w-full">
-            <textarea
-              name="message"
-              placeholder="What can I do for you ?"
-              className="form-element min-h-72 glass"
-              required
-            />
-          </label>
+          <input
+            name="name"
+            placeholder="Your name ?"
+            className="form-element w-full glass py-5"
+            required
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Your email ?"
+            className="form-element w-full glass py-5"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="What can I do for you ?"
+            className="form-element min-h-72 glass"
+            required
+          />
           <button type="submit" className="mt-10 border-secondary border-[2px] p-3 px-5 rounded-md flex items-center gap-1">
             Send
             <Arrow />
