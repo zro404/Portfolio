@@ -9,12 +9,12 @@ const LINKS =
       </a>
     </li>
     <li>
-      <a href="#projects">
+      <a href="https://github.com/harish3124" target="_blank">
         Projects
       </a>
     </li>
     <li>
-      <a href="">
+      <a href="https://docs.google.com/document/d/1mUa-c9qD0NHPQmbt4OrwylJQhHwqD_ySdAlXNh9GsQ8/edit?usp=sharing" target="_blank">
         Resume
       </a>
     </li>

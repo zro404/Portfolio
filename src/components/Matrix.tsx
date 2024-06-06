@@ -53,6 +53,6 @@ export const Matrix = () => {
   }, []);
 
   return (
-    <canvas ref={canvasEl} className={`w-screen min-h-screen h-[${100 * pageLength}vh] -ml-[15%] z-[-1] absolute`} />
+    <canvas ref={canvasEl} className={`w-screen min-h-screen h-[${100 * pageLength}vh] lg:-ml-[15%] -ml-[5%] z-[-1] absolute`} />
   )
 }

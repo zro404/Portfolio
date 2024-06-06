@@ -3,7 +3,7 @@ import { About, Contact, Experience, Hero } from './pages'
 // w-[70%] mx-auto 
 function App() {
   return (
-    <div className='text-secondary w-[70%] mx-auto'>
+    <div className='text-secondary w-[90%] lg:w-[70%] mx-auto'>
       <Matrix />
       <NavBar />
       <div>

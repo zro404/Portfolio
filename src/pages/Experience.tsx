@@ -25,10 +25,10 @@ export const Experience = () => {
 
 export const ExpItem = (props: ExpProps) => {
   return (
-    <div className="flex gap-10">
-      <img src={props.thumbnail} className="rounded-[50px] sm:size-40 size-32 sm:mt-8 mt-5 ml-2" />
-      <div className="flex flex-col  mt-4 glass p-3">
-        <h3 className="sm:text-[28px] text-[24px]">{props.position}</h3>
+    <div className="flex gap-3 sm:gap-10 items-center">
+      <img src={props.thumbnail} className="rounded-[50px] sm:size-40 size-32 ml-2" />
+      <div className="flex flex-col glass p-3">
+        <h3 className="sm:text-[28px] text-[22px]">{props.position}</h3>
         <h4 className="sm:text-[24px] text-[20px]">{props.company}</h4>
         <p>{props.role}</p>
         <p>{props.mode}</p>
@@ -37,11 +37,3 @@ export const ExpItem = (props: ExpProps) => {
     </div>
   )
 }
-
-// <img
-//   src="/src/assets/blobs/blob-small.svg"
-//   className="absolute z-[-1] sm:size-56 size-44 left-[14vw]"
-//   style={{
-//     transform: `rotate(${props.blobRotation}deg)`
-//   }}
-// />
