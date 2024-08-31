@@ -9,7 +9,7 @@ const LINKS =
       </a>
     </li>
     <li>
-      <a href="https://github.com/harish3124" target="_blank">
+      <a href="https://github.com/zro404" target="_blank">
         Projects
       </a>
     </li>
