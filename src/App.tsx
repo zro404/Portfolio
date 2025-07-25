@@ -1,20 +1,23 @@
-import { Footer, Matrix, NavBar } from './components'
-import { About, Contact, Experience, Hero } from './pages'
-// w-[70%] mx-auto 
+import "./App.css";
+import Header from "./components/Header";
+import About from "./views/About";
+import Experiences from "./views/Experiences";
+import Hero from "./views/Hero";
+
 function App() {
   return (
-    <div className='text-secondary w-[90%] lg:w-[70%] mx-auto'>
-      <Matrix />
-      <NavBar />
-      <div>
+    <div className="flex flex-col min-h-screen w-full">
+      <Header />
+      <div className="w-full">
         <Hero />
         <About />
-        <Experience />
-        <Contact />
+        <Experiences />
       </div>
-      <Footer />
+      <footer className="flex justify-center text-sm font-light">
+        <p>&copy; Copyright Harish G 2025</p>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
