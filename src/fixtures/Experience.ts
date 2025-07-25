@@ -2,6 +2,16 @@ import { ExpProps } from "../pages";
 
 export const EXP: ExpProps[] = [
   {
+    thumbnail: "/hackclub.png",
+    position: "Web Development Lead",
+    company: "Hackclub VITC",
+    role: "Lead",
+    mode: "On Campus",
+    start: "Apr 25",
+    end: "Present",
+    blobRotation: 90,
+  },
+  {
     thumbnail: "/corider.jpg",
     position: "Frontend Developer",
     company: "Corider",
@@ -31,5 +41,4 @@ export const EXP: ExpProps[] = [
     end: "Present",
     blobRotation: 180,
   },
-
-]
+];
