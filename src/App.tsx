@@ -4,6 +4,7 @@ import Dock from "./components/Dock";
 import About from "./views/About";
 import Experiences from "./views/Experiences";
 import Hero from "./views/Hero";
+import Contact from "./views/Contact";
 
 const DockItems = [
   {
@@ -44,11 +45,12 @@ const DockItems = [
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen w-full">
+    <div className="flex flex-col min-h-screen">
       <div className="w-full">
         <Hero />
         <About />
         <Experiences />
+        <Contact />
       </div>
       <Dock
         items={DockItems}
@@ -57,7 +59,7 @@ function App() {
         magnification={100}
         className="fixed bg-[#ecfff6] border-[#61dca3]"
       />
-      <footer className="flex justify-center text-sm font-light">
+      <footer className="flex justify-start pl-1 text-sm font-semibold">
         <p>&copy; Copyright Harish G 2025</p>
       </footer>
     </div>

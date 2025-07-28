@@ -11,5 +11,10 @@ body {
 
 #hero {
   color: #ecfff6;
-  /* @apply text-shadow-md text-shadow-[#ecfff6]; */
+  user-select: none;
+}
+
+#about {
+  user-select: none;
+  color: #ecfff6;
 }

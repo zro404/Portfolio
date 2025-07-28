@@ -1,7 +1,9 @@
+import ScrollVelocity from "@/components/ScrollVelocity";
+import TextType from "@/components/TextType";
 import { Badge } from "@/shadcn/components/ui/badge";
 import { Building2, Calendar } from "lucide-react";
 
-const experiences = [
+const experiences: ExperienceItemType[] = [
   {
     title: "Web Development Lead",
     company: "HackClub VIT",
@@ -17,38 +19,95 @@ const experiences = [
     technologies: ["React", "SocketIO", "ChakraUI", "Jira", "Bitbucket"],
   },
   {
-    title: "Web Developer",
-    company: "HackClub VIT",
-    period: "Sep 2023 - Present",
-    description: "",
-    technologies: ["Linux"],
-  },
-  {
     title: "Frontend Developer",
     company: "Linux Club VIT",
     period: "Sep 2023 - Sep 2024",
     description: "",
     technologies: ["Linux"],
   },
+  {
+    title: "Web Developer",
+    company: "HackClub VIT",
+    period: "Sep 2023 - Present",
+    description: "",
+    technologies: ["React", "TailwindCSS", "Git", "GitHub", "Figma"],
+  },
 ];
+
+type ExperienceItemType = {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  technologies: string[];
+};
 
 export default function Experiences() {
   return (
-    <div className="max-w-screen-sm mx-auto py-12 md:py-20 px-6">
-      <div className="relative ml-3">
-        {/* Timeline line */}
-        <div className="absolute left-0 top-4 bottom-0 border-l-2" />
+    <>
+      <ScrollVelocity
+        texts={["Experiences"]}
+        className="text-sm px-1 text-[#ecfff6] font-light bungee-regular"
+        parallaxClassName="w-full bg-black"
+        numCopies={30}
+      />
+      <div className="max-w-screen-sm mx-auto py-12 md:py-20 px-0 flex flex-col justify-center items-center gap-3">
+        <TextType
+          text={["My Journey So Far", "My Journey So Far"]}
+          pauseDuration={3000}
+          cursorCharacter="_"
+          textColors={["#000000"]}
+          className="bungee-regular text-3xl ml-10"
+        />
+        <div className="relative ml-3 flex">
+          <ExperienceItem experiences={experiences} alignment="left" />
+          {/* Timeline line */}
+          <div className=" top-4 bottom-0 border-l-2" />
+          <ExperienceItem experiences={experiences} alignment="right" />
+        </div>
+      </div>
+    </>
+  );
+}
 
-        {experiences.map(
-          ({ company, description, period, technologies, title }, index) => (
-            <div key={index} className="relative pl-8 pb-12 last:pb-0">
+const ExperienceItem = ({
+  experiences,
+  alignment,
+}: {
+  experiences: ExperienceItemType[];
+  alignment: "left" | "right";
+}) => {
+  return (
+    <div>
+      {experiences.map(
+        ({ company, description, period, technologies, title }, index) => {
+          const isFiltered =
+            (alignment === "left" && index % 2 === 0) ||
+            (alignment === "right" && index % 2 !== 0);
+          return (
+            <div
+              key={index}
+              className={`relative pl-8 pb-12 last:pb-0 ${
+                isFiltered ? "text-transparent my-5 select-none" : ""
+              }`}
+            >
               {/* Timeline dot */}
-              <div className="absolute h-3 w-3 -translate-x-1/2 left-px top-3 rounded-full border-2 border-primary bg-background" />
+              {!isFiltered && (
+                <div
+                  className={`absolute h-3 w-3 -translate-x-1/2 top-3 rounded-full border-2 border-primary bg-background ${
+                    alignment === "right" ? "left-[-0.05em]" : "right-[-0.8em]"
+                  }`}
+                />
+              )}
 
               {/* Content */}
-              <div className="space-y-3">
+              <div className={`flex flex-col gap-2`}>
                 <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center">
+                  <div
+                    className={`flex-shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center ${
+                      isFiltered ? "hidden" : ""
+                    }`}
+                  >
                     <Building2 className="h-5 w-5 text-muted-foreground" />
                   </div>
                   <span className="text-base sm:text-lg font-semibold">
@@ -57,7 +116,7 @@ export default function Experiences() {
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl font-medium">{title}</h3>
-                  <div className="flex items-center gap-2 mt-1 text-sm">
+                  <div className="flex items-center gap-2 mt-1 text-sm select-none">
                     <Calendar className="h-4 w-4" />
                     <span>{period}</span>
                   </div>
@@ -65,12 +124,12 @@ export default function Experiences() {
                 <p className="text-sm sm:text-base text-muted-foreground">
                   {description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 select-none">
                   {technologies.map((tech) => (
                     <Badge
                       key={tech}
                       variant="secondary"
-                      className="rounded-full"
+                      className={`rounded-full ${isFiltered ? "hidden" : ""}`}
                     >
                       {tech}
                     </Badge>
@@ -78,9 +137,9 @@ export default function Experiences() {
                 </div>
               </div>
             </div>
-          )
-        )}
-      </div>
+          );
+        }
+      )}
     </div>
   );
-}
+};
