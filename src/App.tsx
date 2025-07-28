@@ -52,6 +52,9 @@ function App() {
         <Experiences />
         <Contact />
       </div>
+      <footer className="flex justify-center text-sm font-semibold mt-5 mb-8">
+        <p>&copy; Copyright Harish G 2025</p>
+      </footer>
       <Dock
         items={DockItems}
         baseItemSize={40}
@@ -59,9 +62,6 @@ function App() {
         magnification={100}
         className="fixed bg-[#ecfff6] border-[#61dca3]"
       />
-      <footer className="flex justify-start pl-1 text-sm font-semibold">
-        <p>&copy; Copyright Harish G 2025</p>
-      </footer>
     </div>
   );
 }

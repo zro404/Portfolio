@@ -49,17 +49,17 @@ export default function Experiences() {
         texts={["Experiences"]}
         className="text-sm px-1 text-[#ecfff6] font-light bungee-regular"
         parallaxClassName="w-full bg-black"
-        numCopies={30}
+        numCopies={20}
       />
-      <div className="max-w-screen-sm mx-auto py-12 md:py-20 px-0 flex flex-col justify-center items-center gap-3">
+      <div className="mx-auto py-12 md:py-20 px-0 flex flex-col justify-center items-center gap-5">
         <TextType
           text={["My Journey So Far", "My Journey So Far"]}
           pauseDuration={3000}
           cursorCharacter="_"
           textColors={["#000000"]}
-          className="bungee-regular text-3xl ml-10"
+          className="bungee-regular text-3xl md:ml-10"
         />
-        <div className="relative ml-3 flex">
+        <div className="relative mx-3 flex">
           <ExperienceItem experiences={experiences} alignment="left" />
           {/* Timeline line */}
           <div className=" top-4 bottom-0 border-l-2" />
@@ -87,9 +87,9 @@ const ExperienceItem = ({
           return (
             <div
               key={index}
-              className={`relative pl-8 pb-12 last:pb-0 ${
+              className={`relative pb-12 last:pb-0 ${
                 isFiltered ? "text-transparent my-5 select-none" : ""
-              }`}
+              } ${alignment === "left" ? "md:pr-8" : "pl-3 md:pl-8"}`}
             >
               {/* Timeline dot */}
               {!isFiltered && (
@@ -115,7 +115,7 @@ const ExperienceItem = ({
                   </span>
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-medium">{title}</h3>
+                  <h3 className="text-md sm:text-xl font-medium">{title}</h3>
                   <div className="flex items-center gap-2 mt-1 text-sm select-none">
                     <Calendar className="h-4 w-4" />
                     <span>{period}</span>

@@ -18,11 +18,14 @@ export default function About() {
               cursorCharacter="_"
               startOnVisible
               textColors={["#f5f5f5"]}
-              className="text-3xl bungee-regular"
+              className="text-2xl md:text-3xl bungee-regular"
             />
-            <div className="md:max-w-[50vw] text-lg">
-              I'm <p className="inline text-2xl text-[#61dca3]">Harish</p>, a
-              passionate frontend developer, proficient in modern frameworks
+            <div className="md:max-w-[50vw] text-md md:text-lg">
+              I'm{" "}
+              <p className="inline text-xl md:text-2xl text-[#61dca3]">
+                Harish
+              </p>
+              , a passionate frontend developer, proficient in modern frameworks
               like NextJs and ReactJs. I stay ahead of industry trends while
               continuously honing my skills to deliver cutting-edge solutions. I
               thrive in fast-paced environments, consistently exceeding

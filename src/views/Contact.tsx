@@ -10,9 +10,9 @@ export default function Contact() {
       id="contact"
       className="flex justify-center items-center w-[85vw] mx-auto"
     >
-      <Card className="transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-        <CardContent className="flex">
-          <div className="flex-3 pr-10 space-y-3">
+      <Card className="transition-transform duration-300 hover:scale-105 hover:shadow-2xl max-w-screen">
+        <CardContent className="flex flex-col md:flex-row p-5">
+          <div className="flex-3 px-5 space-y-3">
             <TextType
               text={["Contact Me", "Contact Me"]}
               cursorCharacter="_"
@@ -42,8 +42,7 @@ export default function Contact() {
             <Textarea name="message" placeholder="Your Message" required />
             <Button
               type="submit"
-              variant="destructive"
-              className="text-[#f5f5f5] border-white border-2"
+              className="text-[#252525] bg-gradient-to-r from-green-400 to-emerald-600 border-2 shadow-lg rounded-lg py-2 hover:scale-105"
             >
               Send
             </Button>
