@@ -1,7 +1,15 @@
+@import "tailwindcss";
+
 #root {
   width: 100vw;
 }
 
 body {
   overflow-x: hidden;
+  background-color: #ecfff6;
+}
+
+#hero {
+  color: #ecfff6;
+  /* @apply text-shadow-md text-shadow-[#ecfff6]; */
 }
