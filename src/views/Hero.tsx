@@ -3,7 +3,7 @@ import LetterGlitch from "@/components/LetterGlitch";
 import TextType from "@/components/TextType";
 export default function Hero() {
   return (
-    <div id="hero" className="h-screen flex justify-center items-center">
+    <div id="hero" className="h-svh flex justify-center items-center">
       <LetterGlitch
         glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
         glitchSpeed={50}

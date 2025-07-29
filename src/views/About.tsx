@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/shadcn/components/ui/card";
 
 export default function About() {
   return (
-    <div id="about" className="min-h-screen flex justify-center items-center">
+    <div id="about" className="min-h-svh flex justify-center items-center">
       <Card className="max-w-screen border-none rounded-none md:rounded-3xl py-20 px-10 transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-[#252525]">
         <CardContent className="flex flex-col md:flex-row gap-14">
           <img

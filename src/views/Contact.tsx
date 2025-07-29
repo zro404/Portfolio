@@ -30,7 +30,7 @@ export default function Contact() {
           <form
             action="https://formspree.io/f/xgegjqae"
             method="POST"
-            className="flex flex-col justify-center gap-2 flex-2 pt-5 pr-5"
+            className="flex flex-col justify-center gap-2 w-[30vw] pt-5 pr-5"
           >
             <Input
               name="email"
